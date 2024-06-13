@@ -1,0 +1,20 @@
+import tkinter as tk
+
+def on_button_click(button_text):
+    print(f"تم النقر على الزر: {button_text}")
+
+# إعداد نافذة التطبيق
+root = tk.Tk()
+root.title("برنامج البرمجة الممتع")
+
+# إعداد الخلفية
+root.configure(bg="yellow")
+
+# إعداد الأزرار
+buttons = ["اناث", "قلقيلية", "الشرعية"]
+for button_text in buttons:
+    button = tk.Button(root, text=button_text, command=lambda t=button_text: on_button_click(t))
+    button.pack()
+
+# تشغيل التطبيق
+root.mainloop()
